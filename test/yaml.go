@@ -41,6 +41,7 @@ import (
 const (
 	sonataFlowOrderProcessingFolder           = "order-processing"
 	sonataFlowGreetingFolder                  = "greeting"
+	sonataFlowHelloWorldFolder                = "hello-world"
 	sonataFlowSampleYamlCR                    = "sonataflow.org_v1alpha08_sonataflow.yaml"
 	SonataFlowGreetingsWithDataInputSchemaCR  = "sonataflow.org_v1alpha08_sonataflow_greetings_datainput.yaml"
 	SonataFlowGreetingsWithStaticResourcesCR  = "sonataflow.org_v1alpha08_sonataflow-metainf.yaml"
@@ -272,6 +273,11 @@ func GetSonataFlowE2eOrderProcessingFolder() string {
 func GetSonataFlowE2eGreetingFolder() string {
 	return e2eSamples + sonataFlowGreetingFolder
 }
+
+func GetSonataFlowE2eHelloWorldFolder() string {
+	return e2eSamples + sonataFlowHelloWorldFolder
+}
+
 
 func GetSonataFlowE2EPlatformServicesDirectory() string {
 	return filepath.Join(getTestDataDir(), "platform", "services")
