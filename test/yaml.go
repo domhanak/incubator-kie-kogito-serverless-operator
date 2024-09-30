@@ -41,6 +41,7 @@ import (
 const (
 	sonataFlowOrderProcessingFolder           = "order-processing"
 	sonataFlowGreetingFolder                  = "greeting"
+	sonataFlowVetFolder                       = "vet"
 	sonataFlowCallbackstateTimeoutsFolder     = "callbackstate-timeouts"
 	postgresFolder                            = "persistence/postgres"
 	sonataFlowSampleYamlCR                    = "sonataflow.org_v1alpha08_sonataflow.yaml"
@@ -53,6 +54,7 @@ const (
 	sonataFlowPlatformYamlCR                  = "sonataflow.org_v1alpha08_sonataflowplatform.yaml"
 	sonataFlowPlatformWithCacheMinikubeYamlCR = "sonataflow.org_v1alpha08_sonataflowplatform_withCache_minikube.yaml"
 	sonataFlowPlatformForOpenshift            = "sonataflow.org_v1alpha08_sonataflowplatform_openshift.yaml"
+	sonataFlowPlatformDIAndJSUsingPostgres    = "sonataflow/platform/sonataflow.org_v1alpha08/sonataflow_platform_with_postgresql_dataindex_and_job_service.yaml"
 	sonataFlowClusterPlatformYamlCR           = "sonataflow.org_v1alpha08_sonataflowclusterplatform.yaml"
 	sonataFlowBuilderConfig                   = "sonataflow-operator-builder-config_v1_configmap.yaml"
 	sonataFlowBuildSucceed                    = "sonataflow.org_v1alpha08_sonataflowbuild.yaml"
@@ -271,8 +273,16 @@ func GetPlatformOpenshiftE2eTest() string {
 	return e2eSamples + sonataFlowPlatformForOpenshift
 }
 
+func GetSFPlatformWithDIandJSUsingPostgres() string {
+	return e2eSamples + sonataFlowPlatformDIAndJSUsingPostgres
+}
+
 func GetSonataFlowE2eOrderProcessingFolder() string {
 	return e2eSamples + sonataFlowOrderProcessingFolder
+}
+
+func GetSonataFlowE2eVetFolder() string {
+	return e2eSamples + sonataFlowVetFolder
 }
 
 func GetSonataFlowE2eGreetingFolder() string {
